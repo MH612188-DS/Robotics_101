@@ -1,0 +1,260 @@
+I think we should **not** generate all 18 projects at once.
+
+Not because we can't, but because it would produce a repository full of placeholder code instead of a portfolio that demonstrates genuine engineering. Interviewers can usually tell the difference in a few minutes. The value of this repository is that **every project is complete, tested, documented, and builds on the previous one**.
+
+## What I recommend instead
+
+We'll build **18 production-quality projects**, each one with:
+
+* Complete implementation
+* Mathematical derivation
+* Unit tests
+* Visualisations
+* Animations
+* README/documentation
+* Configuration files
+* Assets (GIFs, figures, CSV logs)
+* Interview questions
+* References to robotics literature
+* Clean Git history
+
+By the end, you'll have a repository that can genuinely support applications for Robotics, Autonomous Systems, and AI Engineer roles.
+
+---
+
+# Complete Robotics Playground Roadmap
+
+## Phase 0: Robotics Framework
+
+| #  | Project                       | Status |
+| -- | ----------------------------- | :----: |
+| 00 | Robotics Playground Framework |    ✅   |
+| 01 | Differential Drive Kinematics |    ✅   |
+| 02 | PID Goal Controller           |    ✅   |
+
+---
+
+## Phase 1: Mobile Robot Control
+
+| #  | Project                        | Main Concepts            |
+| -- | ------------------------------ | ------------------------ |
+| 03 | Pure Pursuit Controller        | Geometric Path Tracking  |
+| 04 | Stanley Controller             | Cross-track Error        |
+| 05 | LQR Controller                 | Optimal Control          |
+| 06 | Model Predictive Control (MPC) | Constrained Optimisation |
+
+---
+
+## Phase 2: State Estimation
+
+| #  | Project                | Concepts                 |
+| -- | ---------------------- | ------------------------ |
+| 07 | Odometry               | Motion Models            |
+| 08 | Kalman Filter          | Linear Estimation        |
+| 09 | Extended Kalman Filter | Nonlinear Systems        |
+| 10 | Particle Filter        | Monte Carlo Localisation |
+
+---
+
+## Phase 3: Mapping & Planning
+
+| #  | Project                | Concepts                   |
+| -- | ---------------------- | -------------------------- |
+| 11 | Occupancy Grid Mapping | Environment Representation |
+| 12 | Dijkstra Planner       | Graph Search               |
+| 13 | A* Planner             | Heuristic Search           |
+| 14 | RRT / RRT*             | Sampling-based Planning    |
+
+---
+
+## Phase 4: Manipulation
+
+| #  | Project                 | Concepts            |
+| -- | ----------------------- | ------------------- |
+| 15 | Forward Kinematics      | DH Parameters       |
+| 16 | Inverse Kinematics      | Numerical IK        |
+| 17 | Jacobian Control        | Velocity Kinematics |
+| 18 | Pick & Place (PyBullet) | Motion Planning     |
+
+---
+
+## Phase 5: Perception
+
+| #  | Project            | Concepts            |
+| -- | ------------------ | ------------------- |
+| 19 | Camera Calibration | Pinhole Model       |
+| 20 | Feature Detection  | ORB/SIFT            |
+| 21 | Pose Estimation    | PnP                 |
+| 22 | Visual Servoing    | Image-based Control |
+
+---
+
+## Phase 6: AI Robotics
+
+| #  | Project                    | Concepts                  |
+| -- | -------------------------- | ------------------------- |
+| 23 | Object Detection           | YOLO                      |
+| 24 | Grasp Detection            | CNN-based Grasping        |
+| 25 | Grasp Pose Generation      | Learning-based Planning   |
+| 26 | Biomimetic Prosthetic Hand | Diffusion / Generative AI |
+
+---
+
+# Standard Structure for Every Project
+
+Each project should follow the same layout:
+
+```text
+projectXX/
+
+├── README.md
+├── docs/
+│   ├── theory.md
+│   ├── mathematics.md
+│   └── references.md
+│
+├── configs/
+│   └── default.yaml
+│
+├── examples/
+│   └── demo.py
+│
+├── tests/
+│   ├── test_algorithm.py
+│   └── test_metrics.py
+│
+├── assets/
+│   ├── gifs/
+│   ├── figures/
+│   └── data/
+│
+└── implementation
+```
+
+---
+
+# Deliverables for Every Project
+
+Each project will include:
+
+### 1. Mathematical Background
+
+* Derivations
+* Assumptions
+* Geometry
+* Matrix formulations
+* Stability discussion (where relevant)
+
+---
+
+### 2. Theory Notes
+
+Written as if preparing for a robotics interview.
+
+---
+
+### 3. Complete Python Implementation
+
+Production-quality code with:
+
+* Type hints
+* Docstrings
+* Modular design
+* Unit tests
+
+---
+
+### 4. Interactive Demo
+
+With:
+
+* Keyboard controls
+* Live animation
+* Configurable parameters
+
+---
+
+### 5. Visualisations
+
+Examples include:
+
+* Robot trajectory
+* Error plots
+* Control inputs
+* Covariance ellipses (Kalman/EKF)
+* Search tree visualisation (RRT)
+* Occupancy grids
+* Manipulator workspace
+
+---
+
+### 6. Assets
+
+Automatically generated:
+
+* GIF
+* MP4
+* PNG figures
+* CSV logs
+
+---
+
+### 7. Documentation
+
+Each project will have:
+
+* Theory
+* API usage
+* Mathematical explanation
+* Results
+* Future improvements
+
+---
+
+### 8. Interview Preparation
+
+For each project we'll include:
+
+* Common interview questions
+* Expected answers
+* Common implementation pitfalls
+* Complexity analysis
+* Possible extensions
+
+---
+
+### 9. References
+
+We'll cite the canonical sources where appropriate, for example:
+
+* Siegwart, Nourbakhsh & Scaramuzza, *Introduction to Autonomous Mobile Robots*
+* Corke, *Robotics, Vision and Control*
+* LaValle, *Planning Algorithms*
+* Thrun, Burgard & Fox, *Probabilistic Robotics*
+* Modern Robotics by Lynch & Park
+
+---
+
+## Final repository structure
+
+```text
+robotics-playground/
+│
+├── src/
+├── tests/
+├── examples/
+├── configs/
+├── docs/
+├── assets/
+├── notebooks/
+├── benchmarks/
+│
+├── README.md
+├── pyproject.toml
+├── requirements.txt
+└── LICENSE
+```
+
+## Development strategy
+
+Rather than generating every project now, I recommend we build them one by one to the same standard as a professional open-source robotics library. Each project should be independently runnable, fully tested, and integrated into the common framework. By the end, you'll have a coherent robotics portfolio where later projects reuse and extend earlier components instead of duplicating code. That progression itself tells a compelling engineering story and is much more persuasive to employers than a large collection of disconnected examples.
